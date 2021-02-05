@@ -28,11 +28,6 @@ const routes = [
         path: '/tags',
         name: 'tags',
         component: () => import(/* webpackChunkName: "tags" */ '@/pages/Tags.vue')
-      },
-      {
-        path: '/about',
-        name: 'about',
-        component: () => import(/* webpackChunkName: "about" */ '@/pages/About.vue')
       }
     ]
   }

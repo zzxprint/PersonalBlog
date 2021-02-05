@@ -1,8 +1,5 @@
 <template>
   <div class="header">
-    <div class="logo">
-      <img src="@/assets/logo.png" alt="">
-    </div>
     <ul class="navigation">
       <router-link
         class="nav"
@@ -25,8 +22,7 @@ export default {
         { label: '首页', url: '/', name: 'home' },
         { label: '归档', url: '/archive', name: 'archive' },
         { label: '分类', url: '/category', name: 'category' },
-        { label: '标签', url: '/tags', name: 'tags' },
-        { label: '关于', url: '/about', name: 'about' }
+        { label: '标签', url: '/tags', name: 'tags' }
       ]
     }
   }
@@ -36,22 +32,13 @@ export default {
 <style lang="scss" scoped>
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   position: sticky;
   top: 0;
   width: 100%;
   height: 65px;
   background: #FFF;
-  border-bottom: 1px solid #EFEFEF;
-  .logo{
-    height: 50px;
-    width: 50px;
-    img{
-      height: 100%;
-      width: 100%;
-    }
-  }
   .navigation{
     justify-content: center;
     align-items: center;
@@ -83,8 +70,8 @@ export default {
       &:hover{
         color: #007acc;
         &::before{
-          left: -2px;
-          width: calc(100% + 4px);
+          left: 0;
+          width: 100%;
         }
         ~ .nav::before{
           left: 0;
@@ -96,8 +83,8 @@ export default {
           content: '';
           position: absolute;
           bottom: 0;
-          left: -2px;
-          width: calc(100% + 4px);
+          left: 0;
+          width: 100%;
           height: 2px;
           background: #007acc;
         }
@@ -111,9 +98,6 @@ export default {
   }
 }
 @media (min-width: 768px) {
-  .logo{
-    margin-right: 20px;
-  }
   .navigation{
     display: flex;
   }

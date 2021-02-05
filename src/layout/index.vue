@@ -2,9 +2,8 @@
   <div class="layout">
     <Header></Header>
     <div class="content">
-      <router-view/>
       <Side></Side>
-      <Container></Container>
+      <Container><router-view/></Container>
     </div>
   </div>
 </template>

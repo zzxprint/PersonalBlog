@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <slot></slot>
   </div>
 </template>
 
@@ -11,7 +12,9 @@ export default {
 
 <style lang="scss" scoped>
 .container{
-  height: 1000px;
+  padding: 20px;
+  height: auto;
   width: 1000px;
+  box-sizing: border-box;
 }
 </style>
