@@ -1,12 +1,13 @@
 <template>
   <div class="archive">
-    Archive
+    <Blog></Blog>
   </div>
 </template>
 
 <script>
+import Blog from '@/components/Blog'
 export default {
-
+  components: { Blog }
 }
 </script>
 
